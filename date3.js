@@ -1,19 +1,19 @@
-function add(date_obj,amount,add_sth){
-  if(add_sth === undefined){
+function add(dateObj,amount,addSth){
+  if(addSth === undefined){
     quantity=parseInt(amount.substring(0,amount.length),10);
     console.log(quantity)
     type=amount.substring(amount.length-1,amount.length);
   }else{
     quantity=amount;
-    type=add_sth;
+    type=addSth;
   }
 if(type === "h" || type === "H"){
-  new_date=date_obj.setHours(date_obj.getHours()+quantity);
-  return new Date(new_date).toDateString().concat(' ', new Date(new_date).toTimeString());
+  newDate=dateObj.setHours(dateObj.getHours()+quantity);
+  return new Date(newDate).toDateString().concat(' ', new Date(newDate).toTimeString());
 }else {
-  new_date=date_obj.setDate(date_obj.getDate() + quantity);
-  console.log(new Date(new_date).toDateString().concat(' ', new Date(new_date).toTimeString()))
-  return new Date(new_date).toDateString().concat(' ', new Date(new_date).toTimeString());
+  newDate=dateObj.setDate(dateObj.getDate() + quantity);
+  console.log(new Date(newDate).toDateString().concat(' ', new Date(newDate).toTimeString()))
+  return new Date(newDate).toDateString().concat(' ', new Date(newDate).toTimeString());
 }
 
 }
